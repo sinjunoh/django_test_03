@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Hello Page</h1>
+
+<form action="/hello/" method="post">
+  {% csrf_token %}
+  <label for="date">Date:</label><br/>
+  <input type="date" id="date" name="date"><br/>
+  <label for="time">Time:</label><br/>
+  <input type="time" id="time" name="time"><br/>
+
+  <!-- 추가된 체크박스들 -->
+  <label><input type="checkbox" name="options" value="vehicle_type"> cartype</label><br>
+  <label><input type="checkbox" name="options" value="cargo_type"> 화물 종류</label><br>
+  <label><input type="checkbox" name="options"value="vehicle_direction"> 차량 진행방향</label><br>
+  <label><input type="checkbox"name="options"value="prediction_data"> 예측 데이터</label><br>
+  <label><input type="checkbox"name= "options"value= "original_video"> 원본 영상</label> 
+
+<br/><br/>
+<input type= "submit"value= "Submit">
+</form> 
+
+</body>
+ </html >
